@@ -1,18 +1,26 @@
-#include"main.h"
 /**
- * print_rev - Prints a string in reverse order
+ * rev_string - reverses a string
  *
- * @s: Pointer to the string to be printed
+ * @s: string parameter input
  *
- * Return: void
- */
-void print_rev(char *s){
-    int i = 0;
-    while(*s != '\0'){
-        i++;
-        s++;
-    while(i>0,i--){
-      printf("%c",s[i]);
-    }
-}
+ * Return: Nothing
+*/
+
+void rev_string(char *s)
+{
+	int l, i;
+	char ch;
+
+	/*find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
+	{
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
+	}
+
 }
