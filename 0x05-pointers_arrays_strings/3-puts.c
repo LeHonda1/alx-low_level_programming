@@ -1,3 +1,5 @@
+#include<main.h>
+
 /**
  * _puts - prints a string to stdout, followed by a newline character
  *
@@ -13,4 +15,3 @@ void _puts(char *str)
     
     putchar('\n');
 }
-
