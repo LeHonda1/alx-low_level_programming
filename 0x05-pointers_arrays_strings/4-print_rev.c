@@ -6,14 +6,13 @@
  *
  * Return: void
  */
-void print_rev(char *s)
-{
-    int index = strlen(s) - 1;
-
-    while (index >= 0)
-    {
-        printf("%c", s[index]);
-        index--;
+void print_rev(char *s){
+    int i = 0;
+    while(*s!="\0"){
+        i++;
+        s++;
+    while(i>0,i--){
+      printf("%c",s[i]);
     }
 }
-
+}
