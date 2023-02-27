@@ -20,9 +20,9 @@ void puts_half(char *str)
         i = (l - 1) / 2;
     }
     while (str[i] != '\0') {
-        _putchar(str[i]);
+        putchar(str[i]);
         i++;
     }
-    _putchar('\n');
+    putchar('\n');
 }
 
