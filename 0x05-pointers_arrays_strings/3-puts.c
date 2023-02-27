@@ -1,14 +1,15 @@
 /**
- * _puts - prints a string to stdout, followed by a newline character
- *
+ * _puts - prints a string, followed by a new line, to stdout
  * @str: pointer to a string
+ *
+ * Return: void
  */
 void _puts(char *str)
 {
-    while (*str != '\0') {
+    while (*str != '\0')
+    {
         putchar(*str++);
     }
-    
     putchar('\n');
 }
 
