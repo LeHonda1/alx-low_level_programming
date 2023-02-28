@@ -9,12 +9,29 @@ int _atoi(char *s)
         if (s[i] == '-')
             sign = -sign;
         if (s[i] >= '0' && s[i] <= '9')
-            num = num * 10 + s[i] - '0';
-        if (num != 0 && !(s[i] >= '0' && s[i] <= '9'))
+        {
+            int digit = s[i] - '0';
+            if (num > INT_MAX/10 || (num == INT_MAX/10 && digit > INT_MAX%10))
+            {
+                num = INT_MAX;
+                break;
+            }
+            else if (num < INT_MIN/10 || (num == INT_MIN/10 && digit > -(INT_MIN%10)))
+            {
+                num = INT_MIN;
+                break;
+            }
+            else
+            {
+                num = num * 10 + sign * digit;
+            }
+        }
+        else if (num != 0)
+        {
             break;
+        }
         i++;
     }
 
-    return num * sign;
+    return num;
 }
-
