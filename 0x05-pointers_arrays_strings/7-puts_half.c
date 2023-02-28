@@ -11,9 +11,9 @@
 void puts_half(char *str)
 {
 	int l;
+        int i;
     for (l = 0; str[l] != '\0'; ++l)
-		;
-    int i;
+	    ;
     if (l % 2 == 0) {
         i = l / 2;
     } else {
@@ -25,4 +25,3 @@ void puts_half(char *str)
     }
     putchar('\n');
 }
-
