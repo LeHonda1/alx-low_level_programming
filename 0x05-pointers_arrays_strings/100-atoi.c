@@ -1,3 +1,5 @@
+#include"main.h"
+#include<limits.h>
 int _atoi(char *s)
 {
     int sign = 1;
@@ -25,7 +27,7 @@ int _atoi(char *s)
             {
                 num = num * 10 + sign * digit;
             }
-        }
+        }2
         else if (num != 0)
         {
             break;
