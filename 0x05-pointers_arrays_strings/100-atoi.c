@@ -1,5 +1,3 @@
-#include"main.h"
-#include<limits.h>
 int _atoi(char *s)
 {
     int sign = 1;
@@ -13,12 +11,12 @@ int _atoi(char *s)
         if (s[i] >= '0' && s[i] <= '9')
         {
             int digit = s[i] - '0';
-            if (num > INT_MAX/10 || (num == INT_MAX/10 && digit > INT_MAX%10))
+            if (num > 2147483647/10 || (num == 2147483647/10 && digit 2147483647%10))
             {
-                num = INT_MAX;
+                num = 2147483647;
                 break;
             }
-            else if (num < INT_MIN/10 || (num == INT_MIN/10 && digit > -(INT_MIN%10)))
+            else if (num < -2147483647/10 || (num == -2147483647/10 && digit > -(-2147483647%10)))
             {
                 num = INT_MIN;
                 break;
@@ -27,7 +25,7 @@ int _atoi(char *s)
             {
                 num = num * 10 + sign * digit;
             }
-        }2
+        }
         else if (num != 0)
         {
             break;
@@ -37,3 +35,4 @@ int _atoi(char *s)
 
     return num;
 }
+
