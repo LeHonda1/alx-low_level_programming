@@ -14,7 +14,7 @@ char *_strncat(char *dest, char *src, int n)
     char *ptr = dest + dest_len;
     int i;
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < src_len&&i < n ; i++)
     { 
          *ptr++ = *src++;
     }
